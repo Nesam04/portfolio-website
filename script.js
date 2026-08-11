@@ -2,9 +2,11 @@ window.onload = function () {
     window.scrollTo(0, 0);
 };
 
+
 const sections = document.querySelectorAll("section");
 
 const navLinks = document.querySelectorAll(".nav-link");
+
 
 window.addEventListener("scroll", () => {
 
@@ -24,6 +26,7 @@ window.addEventListener("scroll", () => {
 
     });
 
+
     navLinks.forEach((link) => {
 
         link.classList.remove("active");
@@ -38,9 +41,11 @@ window.addEventListener("scroll", () => {
 
 });
 
+
 const hiddenElements = document.querySelectorAll(
     ".about, .skills, .projects, .experience, .contact"
 );
+
 
 const observer = new IntersectionObserver((entries) => {
 
@@ -49,12 +54,15 @@ const observer = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
 
             entry.target.classList.add("show");
+
             observer.unobserve(entry.target);
+
         }
 
     });
 
 });
+
 
 hiddenElements.forEach((element) => {
 
@@ -64,45 +72,50 @@ hiddenElements.forEach((element) => {
 
 });
 
+
 const topBtn = document.getElementById("topBtn");
 
-window.addEventListener("scroll",()=>{
 
-    if(window.scrollY > 300){
+window.addEventListener("scroll", () => {
 
-        topBtn.style.display="block";
+    if (window.scrollY > 300) {
 
-    }else{
+        topBtn.style.display = "block";
 
-        topBtn.style.display="none";
+    } else {
+
+        topBtn.style.display = "none";
 
     }
 
 });
 
-topBtn.onclick=()=>{
+
+topBtn.onclick = () => {
 
     window.scrollTo({
 
-        top:0,
+        top: 0,
 
-        behavior:"smooth"
+        behavior: "smooth"
 
     });
 
 };
 
-const navbar=document.querySelector("nav");
 
-window.addEventListener("scroll",()=>{
+const navbar = document.querySelector("nav");
 
-    if(window.scrollY>50){
 
-        navbar.style.boxShadow="0 5px 20px rgba(0,0,0,.3)";
+window.addEventListener("scroll", () => {
 
-    }else{
+    if (window.scrollY > 50) {
 
-        navbar.style.boxShadow="none";
+        navbar.style.boxShadow = "0 5px 20px rgba(0,0,0,.3)";
+
+    } else {
+
+        navbar.style.boxShadow = "none";
 
     }
 
